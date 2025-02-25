@@ -43,7 +43,7 @@ if df_classifica is not None:
 
     # Resetta l'indice per una visualizzazione più pulita
     df_classifica = df_classifica.reset_index()
-
+    df_classifica.index = df_classifica.index + 1
     # Mostra la classifica
     st.dataframe(df_classifica)
 else:
