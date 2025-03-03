@@ -40,15 +40,6 @@ if df_classifica is not None:
 else:
     st.warning("⚠️ Nessuna classifica trovata. Carica il file 'classifica.csv'.")
 
-# 📌 Mostra Storico Giornate
-st.subheader("📅 Storico Giornate")
-df_storico = carica_storico()
-
-if df_storico is not None:
-    st.dataframe(df_storico)
-else:
-    st.warning("⚠️ Nessun storico trovato. Carica il file 'storico_giornate.csv'.")
-
 # 📌 Mostra Scontri Diretti con menu a tendina
 st.subheader("⚔️ Scontri Diretti")
 df_scontri = carica_scontri()
@@ -67,3 +58,12 @@ if df_scontri is not None:
     st.dataframe(df_risultati)
 else:
     st.warning("⚠️ Nessun file di scontri diretti trovato. Carica 'scontri_diretti.csv'.")
+
+# 📌 Mostra Storico Giornate
+st.subheader("📅 Storico Giornate")
+df_storico = carica_storico()
+
+if df_storico is not None:
+    st.dataframe(df_storico)
+else:
+    st.warning("⚠️ Nessun storico trovato. Carica il file 'storico_giornate.csv'.")
