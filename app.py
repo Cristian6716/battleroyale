@@ -64,6 +64,6 @@ if df_scontri is not None:
     df_risultati = pd.DataFrame({"Avversario": risultati_squadra.index, "Esito": risultati_squadra.values})
 
     # Mostriamo solo i risultati della squadra selezionata
-     st.dataframe(df_risultati.style.hide(axis="index"))
+    st.dataframe(df_risultati.style.hide(axis="index"))
 else:
     st.warning("⚠️ Nessun file di scontri diretti trovato. Carica 'scontri_diretti.csv'.")
