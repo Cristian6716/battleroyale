@@ -7,14 +7,11 @@ FILE_CLASSIFICA = "classifica.csv"
 FILE_STORICO = "storico_giornate.csv"
 FILE_SCONTRI = "scontri_diretti.csv"
 
-
 # Funzione per caricare la classifica
 def carica_classifica():
     if os.path.exists(FILE_CLASSIFICA):
-        df = pd.read_csv(FILE_CLASSIFICA, index_col=0)
-        return df
+        return pd.read_csv(FILE_CLASSIFICA, index_col=0)
     return None
-
 
 # Funzione per caricare lo storico giornate
 def carica_storico():
@@ -22,13 +19,11 @@ def carica_storico():
         return pd.read_csv(FILE_STORICO)
     return None
 
-
 # Funzione per caricare gli scontri diretti
 def carica_scontri():
     if os.path.exists(FILE_SCONTRI):
         return pd.read_csv(FILE_SCONTRI, index_col=0)
     return None
-
 
 # Titolo dell'app
 st.title("⚽ Fantacalcio Battle Royale")
@@ -38,13 +33,9 @@ st.subheader("🏆 Classifica Attuale")
 df_classifica = carica_classifica()
 
 if df_classifica is not None:
-    # Ordina per punti_scontri e poi punti_totali
     df_classifica = df_classifica.sort_values(by=["punti_scontri", "punti_totali"], ascending=[False, False])
-
-    # Resetta l'indice per una visualizzazione più pulita
     df_classifica = df_classifica.reset_index()
     df_classifica.index = df_classifica.index + 1
-    # Mostra la classifica
     st.dataframe(df_classifica)
 else:
     st.warning("⚠️ Nessuna classifica trovata. Carica il file 'classifica.csv'.")
@@ -58,12 +49,21 @@ if df_storico is not None:
 else:
     st.warning("⚠️ Nessun storico trovato. Carica il file 'storico_giornate.csv'.")
 
-# 📌 Mostra Scontri Diretti
+# 📌 Mostra Scontri Diretti con menu a tendina
 st.subheader("⚔️ Scontri Diretti")
 df_scontri = carica_scontri()
 
 if df_scontri is not None:
-    st.dataframe(df_scontri)
+    squadre = list(df_scontri.index)  # Lista delle squadre
+    squadra_scelta = st.selectbox("Seleziona una squadra", squadre)
+
+    # Filtriamo solo la riga della squadra selezionata
+    risultati_squadra = df_scontri.loc[squadra_scelta].dropna()
+
+    # Convertiamo la serie in DataFrame per una visualizzazione più chiara
+    df_risultati = pd.DataFrame({"Avversario": risultati_squadra.index, "Esito": risultati_squadra.values})
+
+    # Mostriamo solo i risultati della squadra selezionata
+    st.dataframe(df_risultati)
 else:
     st.warning("⚠️ Nessun file di scontri diretti trovato. Carica 'scontri_diretti.csv'.")
-
