@@ -45,7 +45,7 @@ st.subheader("📅 Storico Giornate")
 df_storico = carica_storico()
 
 if df_storico is not None:
-    st.dataframe(df_storico)
+    st.dataframe(df_storico.style.hide(axis="index"))
 else:
     st.warning("⚠️ Nessun storico trovato. Carica il file 'storico_giornate.csv'.")
 
@@ -64,6 +64,6 @@ if df_scontri is not None:
     df_risultati = pd.DataFrame({"Avversario": risultati_squadra.index, "Esito": risultati_squadra.values})
 
     # Mostriamo solo i risultati della squadra selezionata
-    st.dataframe(df_risultati)
+    st.dataframe(df_risultati.style.hide(axis="index"))
 else:
     st.warning("⚠️ Nessun file di scontri diretti trovato. Carica 'scontri_diretti.csv'.")
