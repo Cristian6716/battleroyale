@@ -1,17 +1,17 @@
 ,Chiquita,Energy,Velaryon,Napolethanos,Sesko,Rco diao,Gottismo,FDP,Borussia,Qara,Pisa,Fredin,Cani,Ostia,Vikings,Rubin
-Chiquita,,P,P,V,V,V,V,V,V,V,V,V,V,P,V,V
-Energy,P,,P,V,V,V,V,V,V,V,V,V,V,P,V,V
-Velaryon,P,P,,V,V,V,V,V,V,V,V,V,V,P,V,V
-Napolethanos,S,S,S,,V,P,P,P,V,P,V,V,V,S,P,V
-Sesko,S,S,S,S,,P,P,S,P,S,V,V,P,S,P,P
-Rco diao,S,S,S,P,P,,P,P,P,P,V,V,P,S,P,V
-Gottismo,S,S,S,P,P,P,,P,P,P,V,V,P,S,P,V
-FDP,S,S,S,P,V,P,P,,V,P,V,V,V,S,P,V
-Borussia,S,S,S,S,P,P,P,S,,S,V,P,P,S,P,P
-Qara,S,S,S,P,V,P,P,P,V,,V,V,V,S,P,V
-Pisa,S,S,S,S,S,S,S,S,S,S,,P,S,S,S,P
-Fredin,S,S,S,S,S,S,S,S,P,S,P,,P,S,S,P
-Cani,S,S,S,S,P,P,P,S,P,S,V,P,,S,P,P
-Ostia,P,P,P,V,V,V,V,V,V,V,V,V,V,,V,V
-Vikings,S,S,S,P,P,P,P,P,P,P,V,V,P,S,,V
-Rubin,S,S,S,S,P,S,S,S,P,S,P,P,P,S,S,
+Chiquita,,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V
+Energy,S,,S,S,S,S,S,P,S,P,P,P,S,S,S,P
+Velaryon,S,V,,P,V,V,V,V,V,V,V,V,V,V,P,V
+Napolethanos,S,V,P,,V,V,V,V,V,V,V,V,V,V,P,V
+Sesko,S,V,S,S,,P,P,V,P,V,V,V,S,P,S,V
+Rco diao,S,V,S,S,P,,P,V,P,V,V,V,S,P,S,V
+Gottismo,S,V,S,S,P,P,,V,P,V,V,V,S,P,S,V
+FDP,S,P,S,S,S,S,S,,S,P,P,P,S,S,S,P
+Borussia,S,V,S,S,P,P,P,V,,V,V,V,S,P,S,V
+Qara,S,P,S,S,S,S,S,P,S,,P,P,S,S,S,P
+Pisa,S,P,S,S,S,S,S,P,S,P,,P,S,S,S,P
+Fredin,S,P,S,S,S,S,S,P,S,P,P,,S,S,S,P
+Cani,S,V,S,S,V,V,V,V,V,V,V,V,,V,S,V
+Ostia,S,V,S,S,P,P,P,V,P,V,V,V,S,,S,V
+Vikings,S,V,P,P,V,V,V,V,V,V,V,V,V,V,,V
+Rubin,S,P,S,S,S,S,S,P,S,P,P,P,S,S,S,
